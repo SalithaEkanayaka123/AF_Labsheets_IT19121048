@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		// exersice 3
+        window.vehicleName = "car";
+        function printVehicleName() {
+            document.writeln(window.vehicleName);
+        }
+
+        let vehicle = {
+            vehicleName: "Van",
+            getVehicleName: function () {
+                return this.vehicleName;
+            }
+        }
+        printVehicleName();
+        document.write("<br>");
+        document.write(vehicle.getVehicleName());
+        document.write("<br>");
+        document.write(this.vehicleName);
+        document.write("<br>");
+	</script>
+</body>
+</html>

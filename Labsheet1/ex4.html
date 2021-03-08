@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		// Exercise 4
+
+        let taxPersonatge = 0.2;
+
+        let value = (function() {
+            let amount = 1000;
+            let taxPersonatge = 0.3;
+            document.writeln(amount + "  " + taxPersonatge + "<br>");
+            return function () {
+                document.writeln(amount + "  " + taxPersonatge + "<br>");
+                amount = (taxPersonatge * amount ) + amount;
+                document.writeln(amount + "  " + taxPersonatge + "<br>");
+                document.writeln("Hi" + "<br>");
+                return amount;
+            }
+        }
+        )();
+
+        document.write(value());
+	</script>
+</body>
+</html>
