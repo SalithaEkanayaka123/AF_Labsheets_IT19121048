@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		 
+		function getValue(callback) {
+			let value = 0;
+			return new Promise((resolve, reject) => {
+				setTimeout(function () {
+					value = 10;
+					resolve(value);
+				}, 1000);
+			});	
+		}
+
+		function getNewValue(value) {
+			return new Promise((resolve, reject) => {
+				setTimeout(function () {
+					resolve(value * 100);
+				}, 1000);
+			});
+			
+		}
+
+		function setValue(value) {
+			return value + 1000;
+		}
+
+		async function print(){
+			let value = await getValue();
+			value = await getNewValue(value);
+			value = setValue(value);
+			return value;
+		}
+
+		print().then(value =>
+			setValue(value)).then(value => console.log(value));
+
+		// getValue().then(function (value) {
+		// 	return getNewValue(value);
+		// }).then(function (value) {
+		// 	console.log(value);
+		// });
+
+		
+		
+	</script>
+</body>
+</html>
