@@ -1,1 +1,0 @@
-db.getCollection('Lab4_1').find({"_id" : ObjectId("604df67f1fbbe86e7f336fee")})
