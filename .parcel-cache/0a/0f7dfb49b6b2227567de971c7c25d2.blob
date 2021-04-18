@@ -1,0 +1,66 @@
+var helpers = require("./node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  require("./components/PostListItem");
+  require("./components/ Posts");
+  var _jsxFileName = "C:\\sliit\\3rd Year\\Application Framework\\Labs\\Labsheet React\\App.jsx";
+  const posts = [{
+    id: 1,
+    name: 'React',
+    description: 'Best UI library'
+  }, {
+    id: 2,
+    name: 'Node',
+    description: 'Server side JS'
+  }];
+  class App extends _reactDefault.default.Component {
+    constructor(props) {
+      super(props);
+    }
+    render() {
+      // return <div>
+      // {/*<table>*/}
+      // {/*    <thead>*/}
+      // {/*    <tr>*/}
+      // {/*        <th>ID</th>*/}
+      // {/*        <th>Name</th>*/}
+      // {/*        <th>Description</th>*/}
+      // {/*    </tr>*/}
+      // {/*    </thead>*/}
+      // {/*    <tbody>*/}
+      // {/*    {posts.map(post => {*/}
+      // {/*        return <tr key={post.id.toString()}>*/}
+      // {/*            <td>{post.id}</td>*/}
+      // {/*            <td>{post.name}</td>*/}
+      // {/*            <td>{post.description}</td>*/}
+      // {/*        </tr>*/}
+      // {/*    })}*/}
+      // {/*    </tbody>*/}
+      // {/*</table>*/}
+      // //newly added
+      // <Posts posts = {posts}/>
+      // </div>
+      return (
+        /*#__PURE__*/_reactDefault.default.createElement("h1", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 43,
+            columnNumber: 16
+          }
+        }, "Hello to React")
+      );
+    }
+  }
+  exports.default = App;
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
